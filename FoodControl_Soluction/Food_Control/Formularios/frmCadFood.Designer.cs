@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadFood));
             System.Windows.Forms.Label iDLabel;
             System.Windows.Forms.Label comidaLabel;
             System.Windows.Forms.Label descriçãoLabel;
@@ -40,22 +39,23 @@
             System.Windows.Forms.Label preparoLabel;
             System.Windows.Forms.Label melhor_ChefLabel;
             System.Windows.Forms.Label preçoLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadFood));
             this.dataSet_Comidas = new Food_Control.Dados.DataSet_Comidas();
             this.foodBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.foodTableAdapter = new Food_Control.Dados.DataSet_ComidasTableAdapters.FoodTableAdapter();
             this.tableAdapterManager = new Food_Control.Dados.DataSet_ComidasTableAdapters.TableAdapterManager();
             this.foodBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.foodBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.iDTextBox = new System.Windows.Forms.TextBox();
             this.comidaTextBox = new System.Windows.Forms.TextBox();
@@ -95,6 +95,106 @@
             ((System.ComponentModel.ISupportInitialize)(this.foodDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
+            // iDLabel
+            // 
+            iDLabel.AutoSize = true;
+            iDLabel.Location = new System.Drawing.Point(51, 55);
+            iDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            iDLabel.Name = "iDLabel";
+            iDLabel.Size = new System.Drawing.Size(21, 13);
+            iDLabel.TabIndex = 1;
+            iDLabel.Text = "ID:";
+            // 
+            // comidaLabel
+            // 
+            comidaLabel.AutoSize = true;
+            comidaLabel.Location = new System.Drawing.Point(51, 75);
+            comidaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            comidaLabel.Name = "comidaLabel";
+            comidaLabel.Size = new System.Drawing.Size(45, 13);
+            comidaLabel.TabIndex = 3;
+            comidaLabel.Text = "Comida:";
+            // 
+            // descriçãoLabel
+            // 
+            descriçãoLabel.AutoSize = true;
+            descriçãoLabel.Location = new System.Drawing.Point(51, 96);
+            descriçãoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            descriçãoLabel.Name = "descriçãoLabel";
+            descriçãoLabel.Size = new System.Drawing.Size(58, 13);
+            descriçãoLabel.TabIndex = 5;
+            descriçãoLabel.Text = "Descrição:";
+            // 
+            // categoriaLabel
+            // 
+            categoriaLabel.AutoSize = true;
+            categoriaLabel.Location = new System.Drawing.Point(51, 117);
+            categoriaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            categoriaLabel.Name = "categoriaLabel";
+            categoriaLabel.Size = new System.Drawing.Size(55, 13);
+            categoriaLabel.TabIndex = 7;
+            categoriaLabel.Text = "Categoria:";
+            // 
+            // origemLabel
+            // 
+            origemLabel.AutoSize = true;
+            origemLabel.Location = new System.Drawing.Point(51, 138);
+            origemLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            origemLabel.Name = "origemLabel";
+            origemLabel.Size = new System.Drawing.Size(43, 13);
+            origemLabel.TabIndex = 9;
+            origemLabel.Text = "Origem:";
+            // 
+            // ingredientesLabel
+            // 
+            ingredientesLabel.AutoSize = true;
+            ingredientesLabel.Location = new System.Drawing.Point(51, 159);
+            ingredientesLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            ingredientesLabel.Name = "ingredientesLabel";
+            ingredientesLabel.Size = new System.Drawing.Size(68, 13);
+            ingredientesLabel.TabIndex = 11;
+            ingredientesLabel.Text = "Ingredientes:";
+            // 
+            // aonde_comerLabel
+            // 
+            aonde_comerLabel.AutoSize = true;
+            aonde_comerLabel.Location = new System.Drawing.Point(51, 179);
+            aonde_comerLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            aonde_comerLabel.Name = "aonde_comerLabel";
+            aonde_comerLabel.Size = new System.Drawing.Size(73, 13);
+            aonde_comerLabel.TabIndex = 13;
+            aonde_comerLabel.Text = "Aonde comer:";
+            // 
+            // preparoLabel
+            // 
+            preparoLabel.AutoSize = true;
+            preparoLabel.Location = new System.Drawing.Point(51, 200);
+            preparoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            preparoLabel.Name = "preparoLabel";
+            preparoLabel.Size = new System.Drawing.Size(47, 13);
+            preparoLabel.TabIndex = 15;
+            preparoLabel.Text = "Preparo:";
+            // 
+            // melhor_ChefLabel
+            // 
+            melhor_ChefLabel.AutoSize = true;
+            melhor_ChefLabel.Location = new System.Drawing.Point(51, 221);
+            melhor_ChefLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            melhor_ChefLabel.Name = "melhor_ChefLabel";
+            melhor_ChefLabel.Size = new System.Drawing.Size(67, 13);
+            melhor_ChefLabel.TabIndex = 17;
+            melhor_ChefLabel.Text = "Melhor Chef:";
+            // 
+            // preçoLabel
+            // 
+            preçoLabel.AutoSize = true;
+            preçoLabel.Location = new System.Drawing.Point(51, 242);
+            preçoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            preçoLabel.Name = "preçoLabel";
+            preçoLabel.Size = new System.Drawing.Size(38, 13);
+            preçoLabel.TabIndex = 19;
+            preçoLabel.Text = "Preço:";
+            // 
             // dataSet_Comidas
             // 
             this.dataSet_Comidas.DataSetName = "DataSet_Comidas";
@@ -120,7 +220,7 @@
             this.foodBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
             this.foodBindingNavigator.BindingSource = this.foodBindingSource;
             this.foodBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.foodBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.foodBindingNavigator.DeleteItem = null;
             this.foodBindingNavigator.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.foodBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
@@ -142,9 +242,35 @@
             this.foodBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.foodBindingNavigator.Name = "foodBindingNavigator";
             this.foodBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.foodBindingNavigator.Size = new System.Drawing.Size(1282, 31);
+            this.foodBindingNavigator.Size = new System.Drawing.Size(855, 31);
             this.foodBindingNavigator.TabIndex = 0;
             this.foodBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 28);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorDeleteItem.Text = "Excluir";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.BindingNavigatorDeleteItem_Click);
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -152,7 +278,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(28, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
             // 
             // bindingNavigatorMovePreviousItem
@@ -161,34 +287,27 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(28, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posição";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(35, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(57, 25);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -210,204 +329,106 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(28, 28);
-            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(28, 28);
-            this.bindingNavigatorDeleteItem.Text = "Excluir";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // foodBindingNavigatorSaveItem
             // 
             this.foodBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.foodBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("foodBindingNavigatorSaveItem.Image")));
             this.foodBindingNavigatorSaveItem.Name = "foodBindingNavigatorSaveItem";
-            this.foodBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.foodBindingNavigatorSaveItem.Size = new System.Drawing.Size(28, 28);
             this.foodBindingNavigatorSaveItem.Text = "Salvar Dados";
             this.foodBindingNavigatorSaveItem.Click += new System.EventHandler(this.FoodBindingNavigatorSaveItem_Click);
-            // 
-            // iDLabel
-            // 
-            iDLabel.AutoSize = true;
-            iDLabel.Location = new System.Drawing.Point(77, 84);
-            iDLabel.Name = "iDLabel";
-            iDLabel.Size = new System.Drawing.Size(30, 20);
-            iDLabel.TabIndex = 1;
-            iDLabel.Text = "ID:";
             // 
             // iDTextBox
             // 
             this.iDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.foodBindingSource, "ID", true));
-            this.iDTextBox.Location = new System.Drawing.Point(191, 81);
+            this.iDTextBox.Location = new System.Drawing.Point(127, 53);
+            this.iDTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iDTextBox.Name = "iDTextBox";
-            this.iDTextBox.Size = new System.Drawing.Size(278, 26);
+            this.iDTextBox.Size = new System.Drawing.Size(187, 20);
             this.iDTextBox.TabIndex = 2;
-            // 
-            // comidaLabel
-            // 
-            comidaLabel.AutoSize = true;
-            comidaLabel.Location = new System.Drawing.Point(77, 116);
-            comidaLabel.Name = "comidaLabel";
-            comidaLabel.Size = new System.Drawing.Size(67, 20);
-            comidaLabel.TabIndex = 3;
-            comidaLabel.Text = "Comida:";
             // 
             // comidaTextBox
             // 
             this.comidaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.foodBindingSource, "Comida", true));
-            this.comidaTextBox.Location = new System.Drawing.Point(191, 113);
+            this.comidaTextBox.Location = new System.Drawing.Point(127, 73);
+            this.comidaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comidaTextBox.Name = "comidaTextBox";
-            this.comidaTextBox.Size = new System.Drawing.Size(278, 26);
+            this.comidaTextBox.Size = new System.Drawing.Size(187, 20);
             this.comidaTextBox.TabIndex = 4;
-            // 
-            // descriçãoLabel
-            // 
-            descriçãoLabel.AutoSize = true;
-            descriçãoLabel.Location = new System.Drawing.Point(77, 148);
-            descriçãoLabel.Name = "descriçãoLabel";
-            descriçãoLabel.Size = new System.Drawing.Size(84, 20);
-            descriçãoLabel.TabIndex = 5;
-            descriçãoLabel.Text = "Descrição:";
             // 
             // descriçãoTextBox
             // 
             this.descriçãoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.foodBindingSource, "Descrição", true));
-            this.descriçãoTextBox.Location = new System.Drawing.Point(191, 145);
+            this.descriçãoTextBox.Location = new System.Drawing.Point(127, 94);
+            this.descriçãoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.descriçãoTextBox.Name = "descriçãoTextBox";
-            this.descriçãoTextBox.Size = new System.Drawing.Size(278, 26);
+            this.descriçãoTextBox.Size = new System.Drawing.Size(187, 20);
             this.descriçãoTextBox.TabIndex = 6;
-            // 
-            // categoriaLabel
-            // 
-            categoriaLabel.AutoSize = true;
-            categoriaLabel.Location = new System.Drawing.Point(77, 180);
-            categoriaLabel.Name = "categoriaLabel";
-            categoriaLabel.Size = new System.Drawing.Size(82, 20);
-            categoriaLabel.TabIndex = 7;
-            categoriaLabel.Text = "Categoria:";
             // 
             // categoriaTextBox
             // 
             this.categoriaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.foodBindingSource, "Categoria", true));
-            this.categoriaTextBox.Location = new System.Drawing.Point(191, 177);
+            this.categoriaTextBox.Location = new System.Drawing.Point(127, 115);
+            this.categoriaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.categoriaTextBox.Name = "categoriaTextBox";
-            this.categoriaTextBox.Size = new System.Drawing.Size(278, 26);
+            this.categoriaTextBox.Size = new System.Drawing.Size(187, 20);
             this.categoriaTextBox.TabIndex = 8;
-            // 
-            // origemLabel
-            // 
-            origemLabel.AutoSize = true;
-            origemLabel.Location = new System.Drawing.Point(77, 212);
-            origemLabel.Name = "origemLabel";
-            origemLabel.Size = new System.Drawing.Size(64, 20);
-            origemLabel.TabIndex = 9;
-            origemLabel.Text = "Origem:";
             // 
             // origemTextBox
             // 
             this.origemTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.foodBindingSource, "Origem", true));
-            this.origemTextBox.Location = new System.Drawing.Point(191, 209);
+            this.origemTextBox.Location = new System.Drawing.Point(127, 136);
+            this.origemTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.origemTextBox.Name = "origemTextBox";
-            this.origemTextBox.Size = new System.Drawing.Size(278, 26);
+            this.origemTextBox.Size = new System.Drawing.Size(187, 20);
             this.origemTextBox.TabIndex = 10;
-            // 
-            // ingredientesLabel
-            // 
-            ingredientesLabel.AutoSize = true;
-            ingredientesLabel.Location = new System.Drawing.Point(77, 244);
-            ingredientesLabel.Name = "ingredientesLabel";
-            ingredientesLabel.Size = new System.Drawing.Size(102, 20);
-            ingredientesLabel.TabIndex = 11;
-            ingredientesLabel.Text = "Ingredientes:";
             // 
             // ingredientesTextBox
             // 
             this.ingredientesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.foodBindingSource, "Ingredientes", true));
-            this.ingredientesTextBox.Location = new System.Drawing.Point(191, 241);
+            this.ingredientesTextBox.Location = new System.Drawing.Point(127, 157);
+            this.ingredientesTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ingredientesTextBox.Name = "ingredientesTextBox";
-            this.ingredientesTextBox.Size = new System.Drawing.Size(278, 26);
+            this.ingredientesTextBox.Size = new System.Drawing.Size(187, 20);
             this.ingredientesTextBox.TabIndex = 12;
-            // 
-            // aonde_comerLabel
-            // 
-            aonde_comerLabel.AutoSize = true;
-            aonde_comerLabel.Location = new System.Drawing.Point(77, 276);
-            aonde_comerLabel.Name = "aonde_comerLabel";
-            aonde_comerLabel.Size = new System.Drawing.Size(108, 20);
-            aonde_comerLabel.TabIndex = 13;
-            aonde_comerLabel.Text = "Aonde comer:";
             // 
             // aonde_comerTextBox
             // 
             this.aonde_comerTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.foodBindingSource, "Aonde_comer", true));
-            this.aonde_comerTextBox.Location = new System.Drawing.Point(191, 273);
+            this.aonde_comerTextBox.Location = new System.Drawing.Point(127, 177);
+            this.aonde_comerTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.aonde_comerTextBox.Name = "aonde_comerTextBox";
-            this.aonde_comerTextBox.Size = new System.Drawing.Size(278, 26);
+            this.aonde_comerTextBox.Size = new System.Drawing.Size(187, 20);
             this.aonde_comerTextBox.TabIndex = 14;
-            // 
-            // preparoLabel
-            // 
-            preparoLabel.AutoSize = true;
-            preparoLabel.Location = new System.Drawing.Point(77, 308);
-            preparoLabel.Name = "preparoLabel";
-            preparoLabel.Size = new System.Drawing.Size(69, 20);
-            preparoLabel.TabIndex = 15;
-            preparoLabel.Text = "Preparo:";
             // 
             // preparoTextBox
             // 
             this.preparoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.foodBindingSource, "Preparo", true));
-            this.preparoTextBox.Location = new System.Drawing.Point(191, 305);
+            this.preparoTextBox.Location = new System.Drawing.Point(127, 198);
+            this.preparoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.preparoTextBox.Name = "preparoTextBox";
-            this.preparoTextBox.Size = new System.Drawing.Size(278, 26);
+            this.preparoTextBox.Size = new System.Drawing.Size(187, 20);
             this.preparoTextBox.TabIndex = 16;
-            // 
-            // melhor_ChefLabel
-            // 
-            melhor_ChefLabel.AutoSize = true;
-            melhor_ChefLabel.Location = new System.Drawing.Point(77, 340);
-            melhor_ChefLabel.Name = "melhor_ChefLabel";
-            melhor_ChefLabel.Size = new System.Drawing.Size(99, 20);
-            melhor_ChefLabel.TabIndex = 17;
-            melhor_ChefLabel.Text = "Melhor Chef:";
             // 
             // melhor_ChefTextBox
             // 
             this.melhor_ChefTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.foodBindingSource, "Melhor_Chef", true));
-            this.melhor_ChefTextBox.Location = new System.Drawing.Point(191, 337);
+            this.melhor_ChefTextBox.Location = new System.Drawing.Point(127, 219);
+            this.melhor_ChefTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.melhor_ChefTextBox.Name = "melhor_ChefTextBox";
-            this.melhor_ChefTextBox.Size = new System.Drawing.Size(278, 26);
+            this.melhor_ChefTextBox.Size = new System.Drawing.Size(187, 20);
             this.melhor_ChefTextBox.TabIndex = 18;
-            // 
-            // preçoLabel
-            // 
-            preçoLabel.AutoSize = true;
-            preçoLabel.Location = new System.Drawing.Point(77, 372);
-            preçoLabel.Name = "preçoLabel";
-            preçoLabel.Size = new System.Drawing.Size(54, 20);
-            preçoLabel.TabIndex = 19;
-            preçoLabel.Text = "Preço:";
             // 
             // preçoTextBox
             // 
             this.preçoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.foodBindingSource, "Preço", true));
-            this.preçoTextBox.Location = new System.Drawing.Point(191, 369);
+            this.preçoTextBox.Location = new System.Drawing.Point(127, 240);
+            this.preçoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.preçoTextBox.Name = "preçoTextBox";
-            this.preçoTextBox.Size = new System.Drawing.Size(278, 26);
+            this.preçoTextBox.Size = new System.Drawing.Size(187, 20);
             this.preçoTextBox.TabIndex = 20;
             // 
             // foodDataGridView
@@ -426,10 +447,11 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.foodDataGridView.DataSource = this.foodBindingSource;
-            this.foodDataGridView.Location = new System.Drawing.Point(91, 446);
+            this.foodDataGridView.Location = new System.Drawing.Point(61, 290);
+            this.foodDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.foodDataGridView.Name = "foodDataGridView";
             this.foodDataGridView.RowTemplate.Height = 28;
-            this.foodDataGridView.Size = new System.Drawing.Size(1069, 220);
+            this.foodDataGridView.Size = new System.Drawing.Size(713, 143);
             this.foodDataGridView.TabIndex = 21;
             this.foodDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FoodDataGridView_CellContentClick);
             // 
@@ -498,9 +520,9 @@
             // 
             // frmCadFood
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1282, 686);
+            this.ClientSize = new System.Drawing.Size(855, 446);
             this.Controls.Add(this.foodDataGridView);
             this.Controls.Add(iDLabel);
             this.Controls.Add(this.iDTextBox);
@@ -523,6 +545,7 @@
             this.Controls.Add(preçoLabel);
             this.Controls.Add(this.preçoTextBox);
             this.Controls.Add(this.foodBindingNavigator);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmCadFood";
             this.Text = "Cadastro das Comidas";
             this.Load += new System.EventHandler(this.FrmCadFood_Load);

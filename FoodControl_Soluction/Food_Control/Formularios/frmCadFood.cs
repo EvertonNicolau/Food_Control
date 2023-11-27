@@ -36,5 +36,14 @@ namespace Food_Control.Formularios
         {
 
         }
+
+        private void BindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Confirma exclusão?","Excluindo registro...", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                foodBindingSource.RemoveCurrent();
+                this.tableAdapterManager.UpdateAll(this.dataSet_Comidas);
+            }
+        }
     }
 }
