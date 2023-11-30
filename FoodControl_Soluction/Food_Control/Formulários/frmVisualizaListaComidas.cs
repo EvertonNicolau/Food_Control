@@ -19,6 +19,8 @@ namespace Food_Control.Formulários
 
         private void frmVisualizaListaComidas_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'dataSet_Comidas.Food'. Você pode movê-la ou removê-la conforme necessário.
+            this.foodTableAdapter.Fill(this.dataSet_Comidas.Food);
 
             this.reportViewer1.RefreshReport();
         }

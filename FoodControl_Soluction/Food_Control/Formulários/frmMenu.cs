@@ -1,4 +1,5 @@
 ﻿using Food_Control.Formularios;
+using Food_Control.Formulários;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,6 +29,13 @@ namespace Food_Control
             frmCadFood objCadFood = new frmCadFood();
             objCadFood.MdiParent = this;
             objCadFood.Show();
+        }
+
+        private void relatórioDePratosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVisualizaListaComidas objVisualiza = new frmVisualizaListaComidas();
+            objVisualiza.MdiParent = this;
+            objVisualiza.Show();
         }
     }
 }
