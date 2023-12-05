@@ -120,6 +120,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Teste\frmOrigemVisualiza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teste\frmOrigemVisualiza.Designer.cs">
+      <DependentUpon>frmOrigemVisualiza.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Formulários\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +146,10 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Relatórios\RelatorioComidas.rdlc" />
+    <EmbeddedResource Include="Teste\frmOrigemVisualiza.resx">
+      <DependentUpon>frmOrigemVisualiza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teste\RelatorioComidas.rdlc" />
     <None Include="Dados\DataSet_Food.xsc">
       <DependentUpon>DataSet_Food.xsd</DependentUpon>
     </None>
