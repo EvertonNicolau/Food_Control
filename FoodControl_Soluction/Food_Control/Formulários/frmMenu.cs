@@ -37,5 +37,15 @@ namespace Food_Control
             objVisualiza.MdiParent = this;
             objVisualiza.Show();
         }
+
+        private void FrmMenu_Load(object sender, EventArgs e)
+        {
+            var loginMenu = new frmLogin();
+            loginMenu.Show();
+
+            this.Visible = false;
+        }
+           
+        }
     }
-}
+
