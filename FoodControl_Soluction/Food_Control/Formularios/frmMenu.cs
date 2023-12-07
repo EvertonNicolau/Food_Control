@@ -40,10 +40,7 @@ namespace Food_Control
 
         private void FrmMenu_Load(object sender, EventArgs e)
         {
-            var loginMenu = new frmLogin();
-            loginMenu.Show();
-
-            this.Visible = false;
+            
         }
            
         }

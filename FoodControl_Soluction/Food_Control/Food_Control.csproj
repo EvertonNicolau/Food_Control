@@ -88,31 +88,31 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet_Food.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Formulários\frmLogin.cs">
+    <Compile Include="Formularios\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulários\frmLogin.Designer.cs">
+    <Compile Include="Formularios\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulários\frmMenu.cs">
+    <Compile Include="Formularios\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulários\frmMenu.Designer.cs">
+    <Compile Include="Formularios\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulários\frmCadFood.cs">
+    <Compile Include="Formularios\frmCadFood.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulários\frmCadFood.Designer.cs">
+    <Compile Include="Formularios\frmCadFood.Designer.cs">
       <DependentUpon>frmCadFood.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulários\frmVisualizaListaComidas.cs">
+    <Compile Include="Formularios\frmVisualizaListaComidas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulários\frmVisualizaListaComidas.Designer.cs">
+    <Compile Include="Formularios\frmVisualizaListaComidas.Designer.cs">
       <DependentUpon>frmVisualizaListaComidas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulários\Login.cs" />
+    <Compile Include="Formularios\Login.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tabela\Model1.Context.cs">
@@ -130,16 +130,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Formulários\frmLogin.resx">
+    <EmbeddedResource Include="Formularios\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulários\frmMenu.resx">
+    <EmbeddedResource Include="Formularios\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulários\frmCadFood.resx">
+    <EmbeddedResource Include="Formularios\frmCadFood.resx">
       <DependentUpon>frmCadFood.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulários\frmVisualizaListaComidas.resx">
+    <EmbeddedResource Include="Formularios\frmVisualizaListaComidas.resx">
       <DependentUpon>frmVisualizaListaComidas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

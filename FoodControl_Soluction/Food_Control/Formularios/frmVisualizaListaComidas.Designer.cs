@@ -31,7 +31,7 @@ namespace Food_Control.Formulários
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            //this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dataSet_Comidas = new Food_Control.Dados.DataSet_Comidas();
             this.foodBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.foodTableAdapter = new Food_Control.Dados.DataSet_ComidasTableAdapters.FoodTableAdapter();
@@ -41,16 +41,16 @@ namespace Food_Control.Formulários
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            //this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet_Pratos";
             reportDataSource1.Value = this.foodBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Food_Control.Relatórios.RelatorioComidas.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1209, 556);
-            this.reportViewer1.TabIndex = 0;
+            //this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            //this.reportViewer1.LocalReport.ReportEmbeddedResource = "Food_Control.Relatórios.RelatorioComidas.rdlc";
+            //this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            //this.reportViewer1.Name = "reportViewer1";
+            //this.reportViewer1.ServerReport.BearerToken = null;
+            //this.reportViewer1.Size = new System.Drawing.Size(1209, 556);
+            //this.reportViewer1.TabIndex = 0;
             // 
             // dataSet_Comidas
             // 

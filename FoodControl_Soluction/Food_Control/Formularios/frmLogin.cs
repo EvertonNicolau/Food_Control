@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Food_Control.Formularios;
+using Food_Control.Formulários;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,19 +30,14 @@ namespace Food_Control.Formulários
         }
 
         private void BotaoEntrar_Click(object sender, EventArgs e)
-        {
-            {
-                try
-                {
-                    if (CaixaUsuario.Text.Equals("everton nicolau") && CaixaSenha.Text.Equals("roane"))
+        {                
+                    if (CaixaUsuario.Text.Equals("everton nicolau") && CaixaSenha.Text.Equals("123456"))
                     {
-                        var menu = new frmMenu();
-                        menu.Show();
-
-                        this.Visible = false;
+                        frmMenu AbrirMenu = new frmMenu();       
+                        AbrirMenu.Show();
                     }
 
-                    else if (CaixaUsuario.Text.Equals("everton nicolau") && CaixaSenha.Text != ("roane") && CaixaSenha.Text != (""))
+                    else if (CaixaUsuario.Text.Equals("everton nicolau") && CaixaSenha.Text != ("123456") && CaixaSenha.Text != (""))
                     {
                         MessageBox.Show("tem alguma coisa incorreta na sua senha, mano (a)" + MessageBoxButtons.OK);
                         CaixaSenha.Text = "";
@@ -59,18 +56,19 @@ namespace Food_Control.Formulários
                         CaixaUsuario.Text = "";
                         CaixaSenha.Text = "";
                     }
-                }
+               
 
-                catch (Exception)
-                {
-
-                }
-            }
+                          
         }
 
         private void BotaoCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
