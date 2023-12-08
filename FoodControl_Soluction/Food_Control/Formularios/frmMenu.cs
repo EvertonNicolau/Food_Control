@@ -33,7 +33,7 @@ namespace Food_Control
 
         private void relatórioDePratosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmVisualizaListaComidas objVisualiza = new frmVisualizaListaComidas();
+            frmVizualiza objVisualiza = new frmVizualiza();
             objVisualiza.MdiParent = this;
             objVisualiza.Show();
         }
@@ -42,7 +42,11 @@ namespace Food_Control
         {
             
         }
-           
+
+        private void listagemDePratosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
+    }
     }
 
